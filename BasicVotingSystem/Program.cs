@@ -33,6 +33,8 @@ namespace SchoolVote
             {
                 Console.WriteLine("\nBefore you start to vote, fill the following details!!");
                 Console.Write("\n  Your Name: ");
+                Console.Write("\n  Sex: ");
+                Console.Write("\n  Grade & Section: ");
             }
         }
     }
