@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\home\\akqir24\\Documents\\projects\\BasicVotingSystem\\BasicVotingSystem.csproj",
+      "projectUniqueName": "Z:\\home\\akqir24\\Documents\\projects\\J.A.R-ComProg-Project\\BasicVotingSystem\\BasicVotingSystem.csproj",
       "projectName": "BasicVotingSystem",
-      "projectPath": "Z:\\home\\akqir24\\Documents\\projects\\BasicVotingSystem\\BasicVotingSystem.csproj",
+      "projectPath": "Z:\\home\\akqir24\\Documents\\projects\\J.A.R-ComProg-Project\\BasicVotingSystem\\BasicVotingSystem.csproj",
       "packagesPath": "C:\\users\\akqir24\\.nuget\\packages\\",
-      "outputPath": "Z:\\home\\akqir24\\Documents\\projects\\BasicVotingSystem\\obj\\",
+      "outputPath": "Z:\\home\\akqir24\\Documents\\projects\\J.A.R-ComProg-Project\\BasicVotingSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\users\\akqir24\\AppData\\Roaming\\NuGet\\NuGet.Config"

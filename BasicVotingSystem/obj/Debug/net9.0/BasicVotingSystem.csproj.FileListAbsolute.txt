@@ -1,0 +1,15 @@
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.GeneratedMSBuildEditorConfig.editorconfig
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.AssemblyInfoInputs.cache
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.AssemblyInfo.cs
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.csproj.CoreCompileInputs.cache
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.sourcelink.json
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\bin\Debug\net9.0\BasicVotingSystem.exe
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\bin\Debug\net9.0\BasicVotingSystem.deps.json
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\bin\Debug\net9.0\BasicVotingSystem.runtimeconfig.json
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\bin\Debug\net9.0\BasicVotingSystem.dll
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\bin\Debug\net9.0\BasicVotingSystem.pdb
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.dll
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\refint\BasicVotingSystem.dll
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.pdb
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\BasicVotingSystem.genruntimeconfig.cache
+Z:\home\akqir24\Documents\projects\J.A.R-ComProg-Project\BasicVotingSystem\obj\Debug\net9.0\ref\BasicVotingSystem.dll
