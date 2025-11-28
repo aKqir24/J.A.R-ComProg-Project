@@ -31,8 +31,8 @@ namespace SchoolVote
             // Identify the options then its statement
             if (option == 1)
             {
-                Console.WriteLine("\nBefore yiou start to vote, fill the following details!!");
-                Console.Write("\nYour Name: ");
+                Console.WriteLine("\nBefore you start to vote, fill the following details!!");
+                Console.Write("\n  Your Name: ");
             }
         }
     }
