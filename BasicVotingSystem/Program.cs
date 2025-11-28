@@ -31,10 +31,23 @@ namespace SchoolVote
             // Identify the options then its statement
             if (option == 1)
             {
+                // This the vote option...
                 Console.WriteLine("\nBefore you start to vote, fill the following details!!");
                 Console.Write("\n  Your Name: ");
                 Console.Write("\n  Sex: ");
                 Console.Write("\n  Grade & Section: ");
+
+                // Class President
+                Console.Write("Vote: ");
+                int president=Convert.ToInt32(Console.ReadLine())
+                if (president == 1){
+
+                } else if (president == 2){
+
+                } else {
+
+                }
+            } elif (option == 2) {
             }
         }
     }
