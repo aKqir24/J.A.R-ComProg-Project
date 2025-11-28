@@ -19,8 +19,8 @@ namespace SchoolVote
             Console.WriteLine("       /\\  __  | |      __   __  | |  |   | __ _|_  _       ");
             Console.WriteLine("      /  \\/    |/ \\    /  \\_/  \\_|/   |   |/  \\_|  |/   ");
             Console.WriteLine("     /(__/\\___/|   |_\\/\\__/ \\__/ |__/  \\_/ \\__/ |_/|__/");
-            Console.WriteLine("\nA voting system made in C#, which focuses on managing the votes");
-            Console.WriteLine("               happening inside the school.\n");
+            Console.WriteLine("\n  A voting system made in C#, which focuses on managing the");
+            Console.WriteLine("               votes happening inside the school.\n");
 
             // Ask you the user to pick an option to vote or manage the votes
             Console.WriteLine("==================== Select an option: ======================\n");
@@ -29,6 +29,11 @@ namespace SchoolVote
             int option=Convert.ToInt32(Console.ReadLine());
 
             // Identify the options then its statement
+            if (option == 1)
+            {
+                Console.WriteLine("\nBefore yiou start to vote, fill the following details!!");
+                Console.Write("\nYour Name: ");
+            }
         }
     }
 }
