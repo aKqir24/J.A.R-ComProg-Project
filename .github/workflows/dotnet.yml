@@ -20,7 +20,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.0.x
-    - name: Restore dependencie
-      run: dotnet restore
+    - name: Restore dependencies
+      run: |
+        cd "BasicVotingSystem"
+        dotnet restore
     - name: Run the program directly
-      run: dotnet run
+      run: |
+        cd "BasicVotingSystem"
+        dotnet run
