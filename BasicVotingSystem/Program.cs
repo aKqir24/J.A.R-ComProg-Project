@@ -25,6 +25,7 @@ namespace SchoolVote
             // Ask you the user to pick an option to vote or manage the votes
             Console.WriteLine("==================== Select an option: ======================\n");
             Console.WriteLine("         1. Vote     2. Admin Panel      3. Exit             \n");
+			                 
             Console.Write("Your selection: ");
             int option=Convert.ToInt32(Console.ReadLine());
 
@@ -32,15 +33,21 @@ namespace SchoolVote
             if (option == 1)
             {
                 // This the vote option...
-                Console.WriteLine("\nBefore you start to vote, fill the following details!!");
-                Console.Write("\n  Your Name: ");
-                Console.Write("\n  Sex: ");
-                Console.Write("\n  Grade & Section: ");
+				Console.WriteLine("\n<----------------------------------------------------------->");
+        	    Console.WriteLine("    Before you start to vote, fill the following details!!");
+        	    Console.Write("	First Name		: ");
+				string voterFirstName=Console.ReadLine();
+        	    Console.Write("	Last Name		: ");
+				string voterLastName=Console.ReadLine();
+        	    Console.Write(" Age				: ");
+				int voterAge=Convert.ToInt32(Console.ReadLine());
+				Console.WriteLine("<----------------------------------------------------------->");
 
                 // Class President
                 Console.Write("Vote: ");
-                int president=Convert.ToInt32(Console.ReadLine())
-                if (president == 1){
+                int president=Convert.ToInt32(Console.ReadLine());
+			}
+                /*if (president == 1){
 
                 } else if (president == 2){
 
@@ -49,7 +56,7 @@ namespace SchoolVote
                 }
             } elif (option == 2) {
             }
-1. Class President
+/*1. Class President
 Janelle Cruz
 Jude Ramirez
 Sofia Dizon
@@ -118,7 +125,7 @@ Kathryn Dela Peña
 12. Escort
 John Carlo Medina
 Francis Paul Reyes
-Noel Fernando
+Noel Fernando*/
         }
     }
 }
