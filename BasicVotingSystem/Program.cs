@@ -49,6 +49,77 @@ namespace SchoolVote
                 }
             } elif (option == 2) {
             }
+1. Class President
+Janelle Cruz
+Jude Ramirez
+Sofia Dizon
+
+2. Vice President
+Marco Lopez
+Kyla Vergara
+Tristan Abadilla
+
+3. Secretary
+Hannah Bautista
+Miguel Sarmiento
+Andrei Ong
+
+4. Assistant Secretary
+Lance Villanueva
+Erika Santos
+Nicole Javier
+
+5. Treasurer
+Justin Mendoza
+Carla Fajardo
+Rhea Salvador
+
+6. Assistant Treasurer
+Jerome Tan
+Lea Cortez
+Bianca Ramos
+
+7. Auditor
+Daniel Uy
+Jasmine Flores
+Nathan Robles
+
+8. Public Information Officer (PIO) 
+Chloe Marquez
+Ranier  Navarro
+Bea Catalan
+Ryan Torres
+
+9. Peace Officer / Sergeant-at-Arms 
+Mark Delos Reyes
+Faith Santiago
+Leo Arcilla
+Shaira Manalo
+
+10. BOD – 12 names
+ Adrian Lim
+Kristine Barrios
+Paolo Hernandez
+Lianne Cruzado
+Victor Manapat
+Jasmine Reyes
+Carl Buenaventura
+Mia Tan
+Seth Villoria
+Andrea Palomares
+Joshua Alcantara
+Claire Santos
+
+11.Muse
+Angelique Perez
+Mary Grace Torres
+Kathryn Dela Peña
+
+12. Escort
+John Carlo Medina
+Francis Paul Reyes
+Noel Fernando
         }
     }
 }
+
