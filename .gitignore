@@ -4,3 +4,9 @@
 *.json
 *.cache
 BasicVotingSystem/bin
+BasicVotingSystem/obj/Debug/net9.0/apphost.exe
+BasicVotingSystem/obj/Debug/net9.0/BasicVotingSystem.AssemblyInfoInputs.cache
+BasicVotingSystem/obj/Debug/net9.0/BasicVotingSystem.dll
+BasicVotingSystem/obj/Debug/net9.0/BasicVotingSystem.sourcelink.json
+BasicVotingSystem/obj/Debug/net9.0/ref/BasicVotingSystem.dll
+BasicVotingSystem/obj/Debug/net9.0/refint/BasicVotingSystem.dll
