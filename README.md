@@ -4,4 +4,17 @@
 
 A voting system made in C#, which focuses on managing the votes happening inside a school.
 
-<img width="554" height="354" alt="gscreenshot_2025-11-28-203132" src="https://github.com/user-attachments/assets/9b98877a-eed4-42f5-85ed-e12d20ef6620" />
+![preview](preview.png)
+
+# Flow Chart
+I will eventually put something here...
+
+# Progress
+
+- [x] Welcome Message / Initial options
+- [x] Student Vote Level Eligibility
+- [ ] Vote Confirmation
+- [ ] Format each position to match the tui
+- [ ] Actual voting system
+- [ ] Summary of all votes using `[x|/]`
+- [ ] Test for each features or conditions

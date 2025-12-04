@@ -13,49 +13,75 @@ namespace SchoolVote
     {
         static void Main(string[] args)
         {
+			// Voters Info
+			string voterFirstName;
+			string voterLastName;
+			int voterGrade;
+
+            // Positions
+
+			// Messages / TUI
+			string forThePosition="|	Vote for position of ";
+			string tuiSpace="| 							       |";
+			string tuiUnderline=" ______________________________________________________________ ";
+            string tuiUnderlinev2=" ____________________________________________________________ ";
+			string tuiUnderline_dashed=" -------------------------------------------------------------- ";
+            string tuiTopLine=$"\n{tuiUnderline}\n{tuiSpace}";
+            string tuiBottomLine=$"{tuiSpace}\n|{tuiUnderlinev2}|\n";
+			string voteChoice="  Your Vote: ";
+
             // Welcome the 'User or Voter' when using this program!!
-            Console.WriteLine("                _                 _  _                       ");
-            Console.WriteLine("       ()      | |               | |(_|   |_/                ");
-            Console.WriteLine("       /\\  __  | |      __   __  | |  |   | __ _|_  _       ");
-            Console.WriteLine("      /  \\/    |/ \\    /  \\_/  \\_|/   |   |/  \\_|  |/   ");
-            Console.WriteLine("     /(__/\\___/|   |_\\/\\__/ \\__/ |__/  \\_/ \\__/ |_/|__/");
-            Console.WriteLine("\n  A voting system made in C#, which focuses on managing the");
+			Console.WriteLine("                _                _     ___  _						");
+			Console.WriteLine("       ()      | |              | |   / (_)| |					    ");
+			Console.WriteLine("       /\\  __  | |     __   __  | |   \\__  | |  _   __ _|_		    ");
+			Console.WriteLine("      /  \\/    |/ \\   /  \\_/  \\_|/    /    |/  |/  /    |		");
+			Console.WriteLine("     /(__/\\___/|  |_\\/\\__/ \\__/ |__/  \\___/|__/|__/\\___/|_/	");
+            Console.WriteLine("\n    A voting system made in C#, which focuses on managing the      ");
             Console.WriteLine("               votes happening inside the school.\n");
 
             // Ask you the user to pick an option to vote or manage the votes
-            Console.WriteLine("==================== Select an option: ======================\n");
-            Console.WriteLine("         1. Vote     2. Admin Panel      3. Exit             \n");
-			                 
-            Console.Write("Your selection: ");
+            Console.WriteLine(" ===================== Select an option: ======================\n");
+            Console.WriteLine("          1. Vote     2. Instructions     3. Exit              \n");
+
+            Console.Write("  Your selection: ");
             int option=Convert.ToInt32(Console.ReadLine());
 
+
             // Identify the options then its statement
-            if (option == 1)
-            {
-                // This the vote option...
-				Console.WriteLine("\n<----------------------------------------------------------->");
-        	    Console.WriteLine("    Before you start to vote, fill the following details!!");
+			if (option == 2 ) {
+			Console.WriteLine("+====================== Instructions: ======================+\n");
+			} else if (option == 3) {
+				Console.WriteLine("\nPress any key to exit...");
+				Console.ReadKey();
+			} else if (option == 1) {
+                // Proceed to vote
+				Console.WriteLine(tuiTopLine);
+        	    Console.WriteLine("|   Before you start to vote, fill the following details!!     |");
+                Console.WriteLine(tuiBottomLine);
         	    Console.Write("	First Name		: ");
-				string voterFirstName=Console.ReadLine();
+				voterFirstName=Console.ReadLine();
         	    Console.Write("	Last Name		: ");
-				string voterLastName=Console.ReadLine();
-        	    Console.Write(" Age				: ");
-				int voterAge=Convert.ToInt32(Console.ReadLine());
-				Console.WriteLine("<----------------------------------------------------------->");
+				voterLastName=Console.ReadLine();
+        	    Console.Write("	Grade			: ");
+                voterGrade=Convert.ToInt32(Console.ReadLine());
 
-                // Class President
-                Console.Write("Vote: ");
-                int president=Convert.ToInt32(Console.ReadLine());
+				// Verify voter, if allowed then proceed
+				if ( voterGrade >= 4 ) {
+					Console.WriteLine("\n\n  You may now proceed to vote!!\n");
+
+					// Class President
+                    Console.WriteLine(tuiTopLine);
+					Console.WriteLine(forThePosition + "`President`"+ "!!");
+					Console.WriteLine(tuiBottomLine);
+					Console.Write(voteChoice);
+					int president=Convert.ToInt32(Console.ReadLine());
+				}
+				else {
+					Console.WriteLine("Only ");
+				}
+			} else {
+				Console.WriteLine("Invalid option!!");
 			}
-                /*if (president == 1){
-
-                } else if (president == 2){
-
-                } else {
-
-                }
-            } elif (option == 2) {
-            }
 /*1. Class President
 Janelle Cruz
 Jude Ramirez
@@ -91,13 +117,13 @@ Daniel Uy
 Jasmine Flores
 Nathan Robles
 
-8. Public Information Officer (PIO) 
+8. Public Information Officer (PIO)
 Chloe Marquez
 Ranier  Navarro
 Bea Catalan
 Ryan Torres
 
-9. Peace Officer / Sergeant-at-Arms 
+9. Peace Officer / Sergeant-at-Arms
 Mark Delos Reyes
 Faith Santiago
 Leo Arcilla
@@ -129,4 +155,3 @@ Noel Fernando*/
         }
     }
 }
-
