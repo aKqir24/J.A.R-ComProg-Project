@@ -21,14 +21,14 @@ namespace SchoolVote
             // Positions
 
 			// Messages / TUI
-			string forThePosition="|	Vote for position of ";
-			string tuiSpace="| 							       |";
+			string forThePosition="Vote for position of ";
+			string tuiSpace="|                                                              |";
 			string tuiUnderline=" ______________________________________________________________ ";
-            string tuiUnderlinev2=" ____________________________________________________________ ";
-			string tuiUnderline_dashed=" -------------------------------------------------------------- ";
+            string tuiUnderlinev2="______________________________________________________________";
             string tuiTopLine=$"\n{tuiUnderline}\n{tuiSpace}";
-            string tuiBottomLine=$"{tuiSpace}\n|{tuiUnderlinev2}|\n";
-			string voteChoice="  Your Vote: ";
+            string tuiBottomLine=$"{tuiSpace}\n|{tuiUnderlinev2}|";
+            string tuiBottomLinev2=$"{tuiBottomLine}\n";
+			string voteChoice="     Enter candidate number: ";
 
             // Welcome the 'User or Voter' when using this program!!
 			Console.WriteLine("                _                _     ___  _						");
@@ -37,7 +37,7 @@ namespace SchoolVote
 			Console.WriteLine("      /  \\/    |/ \\   /  \\_/  \\_|/    /    |/  |/  /    |		");
 			Console.WriteLine("     /(__/\\___/|  |_\\/\\__/ \\__/ |__/  \\___/|__/|__/\\___/|_/	");
             Console.WriteLine("\n    A voting system made in C#, which focuses on managing the      ");
-            Console.WriteLine("               votes happening inside the school.\n");
+            Console.WriteLine("         `SPG` votes in Escalante Central Elementary School.       \n");
 
             // Ask you the user to pick an option to vote or manage the votes
             Console.WriteLine(" ===================== Select an option: ======================\n");
@@ -49,7 +49,7 @@ namespace SchoolVote
 
             // Identify the options then its statement
 			if (option == 2 ) {
-			Console.WriteLine("+====================== Instructions: ======================+\n");
+			Console.WriteLine(" +====================== Instructions: ======================+\n");
 			} else if (option == 3) {
 				Console.WriteLine("\nPress any key to exit...");
 				Console.ReadKey();
@@ -57,24 +57,53 @@ namespace SchoolVote
                 // Proceed to vote
 				Console.WriteLine(tuiTopLine);
         	    Console.WriteLine("|   Before you start to vote, fill the following details!!     |");
-                Console.WriteLine(tuiBottomLine);
-        	    Console.Write("	First Name		: ");
+                Console.WriteLine(tuiBottomLinev2);
+        	    Console.Write("     First Name      : ");
 				voterFirstName=Console.ReadLine();
-        	    Console.Write("	Last Name		: ");
+        	    Console.Write("     Last Name       : ");
 				voterLastName=Console.ReadLine();
-        	    Console.Write("	Grade			: ");
+        	    Console.Write("     Grade           : ");
                 voterGrade=Convert.ToInt32(Console.ReadLine());
 
 				// Verify voter, if allowed then proceed
 				if ( voterGrade >= 4 ) {
-					Console.WriteLine("\n\n  You may now proceed to vote!!\n");
+                    Console.WriteLine("\n\n     Hello " + voterFirstName + " " + voterLastName + ", You can now proceed to vote!!");
 
 					// Class President
                     Console.WriteLine(tuiTopLine);
-					Console.WriteLine(forThePosition + "`President`"+ "!!");
+					Console.WriteLine("|              " + forThePosition + "'President'"+ "                |");
 					Console.WriteLine(tuiBottomLine);
+                    Console.WriteLine(tuiSpace);
+                    Console.WriteLine("|        1. Marco Lopez                                        |");
+                    Console.WriteLine("|        2. Tristan Abadilla                                   |");
+                    Console.WriteLine("|        3. Kyla Vergara                                       |");
+                    Console.WriteLine(tuiBottomLinev2);
 					Console.Write(voteChoice);
 					int president=Convert.ToInt32(Console.ReadLine());
+
+                    // Vice President
+                    Console.WriteLine(tuiTopLine);
+					Console.WriteLine("|           " + forThePosition + "'Vice President'"+ "              |");
+					Console.WriteLine(tuiBottomLine);
+                    Console.WriteLine(tuiSpace);
+                    Console.WriteLine("|        1. Janelle                                            |");
+                    Console.WriteLine("|        2. Cruz Jude                                          |");
+                    Console.WriteLine("|        3. Ramirez Sofia Dizon                                |");
+                    Console.WriteLine(tuiBottomLinev2);
+					Console.Write(voteChoice);
+					int vice_president=Convert.ToInt32(Console.ReadLine());
+
+                    // Secretary
+                    Console.WriteLine(tuiTopLine);
+					Console.WriteLine("|              " + forThePosition + "'Secretary'"+ "                |");
+					Console.WriteLine(tuiBottomLine);
+                    Console.WriteLine(tuiSpace);
+                    Console.WriteLine("|        1. Hannah Bautista                                    |");
+                    Console.WriteLine("|        2. Miguel Sarmiento                                   |");
+                    Console.WriteLine("|        3. Ramirez Sofia Dizon                                |");
+                    Console.WriteLine(tuiBottomLinev2);
+					Console.Write(voteChoice);
+					int secretary=Convert.ToInt32(Console.ReadLine());
 				}
 				else {
 					Console.WriteLine("Only ");
@@ -83,18 +112,16 @@ namespace SchoolVote
 				Console.WriteLine("Invalid option!!");
 			}
 /*1. Class President
-Janelle Cruz
-Jude Ramirez
-Sofia Dizon
+
 
 2. Vice President
-Marco Lopez
-Kyla Vergara
-Tristan Abadilla
+
+
+
 
 3. Secretary
-Hannah Bautista
-Miguel Sarmiento
+
+
 Andrei Ong
 
 4. Assistant Secretary
