@@ -37,7 +37,7 @@ namespace SchoolVote
 			Console.WriteLine("      /  \\/    |/ \\   /  \\_/  \\_|/    /    |/  |/  /    |		");
 			Console.WriteLine("     /(__/\\___/|  |_\\/\\__/ \\__/ |__/  \\___/|__/|__/\\___/|_/	");
             Console.WriteLine("\n    A voting system made in C#, which focuses on managing the      ");
-            Console.WriteLine("         `SPG` votes in Escalante Central Elementary School.       \n");
+            Console.WriteLine("           `SPG` votes in Escalante National High School.          \n");
 
             // Ask you the user to pick an option to vote or manage the votes
             Console.WriteLine(" ===================== Select an option: ======================\n");
@@ -48,11 +48,11 @@ namespace SchoolVote
 
 
             // Identify the options then its statement
-			if (option == 2 ) {
-			Console.WriteLine(" +====================== Instructions: ======================+\n");
-			} else if (option == 3) {
+			if (option == 3) {
 				Console.WriteLine("\nPress any key to exit...");
 				Console.ReadKey();
+            } else if (option == 2 ) {
+			    Console.WriteLine(" +====================== Instructions: ======================+\n");
 			} else if (option == 1) {
                 // Proceed to vote
 				Console.WriteLine(tuiTopLine);
@@ -100,10 +100,48 @@ namespace SchoolVote
                     Console.WriteLine(tuiSpace);
                     Console.WriteLine("|        1. Hannah Bautista                                    |");
                     Console.WriteLine("|        2. Miguel Sarmiento                                   |");
-                    Console.WriteLine("|        3. Ramirez Sofia Dizon                                |");
+                    Console.WriteLine("|        3. Andrei Ong                                         |");
+                    Console.WriteLine("|        4. Ramirez Sofia Dizon                                |");
                     Console.WriteLine(tuiBottomLinev2);
 					Console.Write(voteChoice);
 					int secretary=Convert.ToInt32(Console.ReadLine());
+
+                    // Treasurer
+                    Console.WriteLine(tuiTopLine);
+					Console.WriteLine("|              " + forThePosition + "'Treasurer'"+ "                |");
+					Console.WriteLine(tuiBottomLine);
+                    Console.WriteLine(tuiSpace);
+                    Console.WriteLine("|        1. Justin Mendoza                                     |");
+                    Console.WriteLine("|        2. Carla Fajardo                                      |");
+                    Console.WriteLine("|        3. Rhea Salvador                                      |");
+                    Console.WriteLine(tuiBottomLinev2);
+					Console.Write(voteChoice);
+					int treasurer=Convert.ToInt32(Console.ReadLine());
+
+                    // Auditor
+                    Console.WriteLine(tuiTopLine);
+					Console.WriteLine("|               " + forThePosition + "'Auditor'"+ "                |");
+					Console.WriteLine(tuiBottomLine);
+                    Console.WriteLine(tuiSpace);
+                    Console.WriteLine("|        1. Daniel Uy                                          |");
+                    Console.WriteLine("|        2. Jasmine Flores                                     |");
+                    Console.WriteLine("|        3. Nathan Robles                                      |");
+                    Console.WriteLine(tuiBottomLinev2);
+					Console.Write(voteChoice);
+					int auditor=Convert.ToInt32(Console.ReadLine());
+
+                    // Auditor
+                    Console.WriteLine(tuiTopLine);
+					Console.WriteLine("|   " + forThePosition + "'Public Information Officer (PIO)'"+ "    |");
+					Console.WriteLine(tuiBottomLine);
+                    Console.WriteLine(tuiSpace);
+                    Console.WriteLine("|        1. Chloe Marquez                                      |");
+                    Console.WriteLine("|        2. Ranier Navarro                                     |");
+                    Console.WriteLine("|        3. Bea Catalan                                        |");
+                    Console.WriteLine("|        4. Ryan Torres                                        |");
+                    Console.WriteLine(tuiBottomLinev2);
+					Console.Write(voteChoice);
+					int pio=Convert.ToInt32(Console.ReadLine());
 				}
 				else {
 					Console.WriteLine("Only ");
@@ -111,45 +149,7 @@ namespace SchoolVote
 			} else {
 				Console.WriteLine("Invalid option!!");
 			}
-/*1. Class President
-
-
-2. Vice President
-
-
-
-
-3. Secretary
-
-
-Andrei Ong
-
-4. Assistant Secretary
-Lance Villanueva
-Erika Santos
-Nicole Javier
-
-5. Treasurer
-Justin Mendoza
-Carla Fajardo
-Rhea Salvador
-
-6. Assistant Treasurer
-Jerome Tan
-Lea Cortez
-Bianca Ramos
-
-7. Auditor
-Daniel Uy
-Jasmine Flores
-Nathan Robles
-
-8. Public Information Officer (PIO)
-Chloe Marquez
-Ranier  Navarro
-Bea Catalan
-Ryan Torres
-
+/*
 9. Peace Officer / Sergeant-at-Arms
 Mark Delos Reyes
 Faith Santiago
@@ -157,7 +157,7 @@ Leo Arcilla
 Shaira Manalo
 
 10. BOD – 12 names
- Adrian Lim
+Adrian Lim
 Kristine Barrios
 Paolo Hernandez
 Lianne Cruzado
