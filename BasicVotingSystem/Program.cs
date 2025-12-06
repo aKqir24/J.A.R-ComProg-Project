@@ -20,8 +20,7 @@ namespace SchoolVote
 
             string confirmVote = "Y";
 
-			// Messages / TUI
-			string forThePosition="Vote for position of ";
+			// TUI
 			string tuiNewLine="|                                                              |";
             string tuiLeftPad="|        ";
             string tuiInfoSpace=" |                                                           |";
@@ -30,9 +29,14 @@ namespace SchoolVote
             string tuiTopLine=$"\n{tuiUnderline}\n{tuiNewLine}";
             string tuiBottomLine=$"{tuiNewLine}\n|{tuiUnderlinev2}|";
             string tuiBottomLinev2=$"{tuiBottomLine}\n";
-			string voteChoiceMsg="     Enter candidate number: ";
+
+            // Messages
+            string helloVoter="\n\n     Hello ";
+            string forThePosition="Vote for position of ";
+            string voteChoiceMsg="     Enter candidate number: ";
             string voteChoiceMsg_again="     Please renter candidate number: ";
             string confirmVoteMsg="     Confirm your vote? (Y/n): ";
+            string eligibilityMSGHeader="====================== Eligibility: =======================";
 
             // Welcome the 'User or Voter' when using this program!!
 			Console.WriteLine("                _                _     ___  _						");
@@ -63,7 +67,7 @@ namespace SchoolVote
                 Console.WriteLine(" |  all the candidates nominated for each position there in, |");
                 Console.WriteLine(" |  will confirm then for recording the results.             |");
                 Console.WriteLine(tuiInfoSpace);
-                Console.WriteLine(" +====================== Elegibility: =======================|");
+                Console.WriteLine(" |"+ eligibilityMSGHeader + "|");
                 Console.WriteLine(tuiInfoSpace);
 			} else if (option == 1) {
                 // Proceed to vote
@@ -78,8 +82,8 @@ namespace SchoolVote
                 voterGrade=Convert.ToInt32(Console.ReadLine());
 
 				// Verify voter, if allowed then proceed
-				if ( voterGrade >= 4 ) {
-                    Console.WriteLine("\n\n     Hello " + voterFirstName + " " + voterLastName + ", You can now proceed to vote!!");
+				if ( voterGrade >= 4 && voterGrade < 7 ) {
+                    Console.WriteLine(helloVoter + voterFirstName + " " + voterLastName + ", You can now proceed to vote!!");
 
 					// Class President
                     Console.WriteLine(tuiTopLine);
@@ -193,7 +197,9 @@ namespace SchoolVote
                     }
 				}
 				else {
-					Console.WriteLine("Only ");
+                    Console.WriteLine(helloVoter + voterFirstName + " " + voterLastName + ", You are not eligible to vote!!");
+					Console.WriteLine("     Please read the eligibility information to learn more.");
+                    Console.WriteLine("\n +=" + eligibilityMSGHeader + "+ ");
 				}
 			} else {
 				Console.WriteLine("Invalid option!!");
