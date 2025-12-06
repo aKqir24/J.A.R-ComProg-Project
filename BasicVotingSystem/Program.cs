@@ -18,17 +18,21 @@ namespace SchoolVote
 			string voterLastName;
 			int voterGrade;
 
-            // Positions
+            string confirmVote = "Y";
 
 			// Messages / TUI
 			string forThePosition="Vote for position of ";
-			string tuiSpace="|                                                              |";
+			string tuiNewLine="|                                                              |";
+            string tuiLeftPad="|        ";
+            string tuiInfoSpace=" |                                                           |";
 			string tuiUnderline=" ______________________________________________________________ ";
             string tuiUnderlinev2="______________________________________________________________";
-            string tuiTopLine=$"\n{tuiUnderline}\n{tuiSpace}";
-            string tuiBottomLine=$"{tuiSpace}\n|{tuiUnderlinev2}|";
+            string tuiTopLine=$"\n{tuiUnderline}\n{tuiNewLine}";
+            string tuiBottomLine=$"{tuiNewLine}\n|{tuiUnderlinev2}|";
             string tuiBottomLinev2=$"{tuiBottomLine}\n";
-			string voteChoice="     Enter candidate number: ";
+			string voteChoiceMsg="     Enter candidate number: ";
+            string voteChoiceMsg_again="     Please renter candidate number: ";
+            string confirmVoteMsg="     Confirm your vote? (Y/n): ";
 
             // Welcome the 'User or Voter' when using this program!!
 			Console.WriteLine("                _                _     ___  _						");
@@ -41,7 +45,7 @@ namespace SchoolVote
 
             // Ask you the user to pick an option to vote or manage the votes
             Console.WriteLine(" ===================== Select an option: ======================\n");
-            Console.WriteLine("          1. Vote     2. Instructions     3. Exit              \n");
+            Console.WriteLine("           1. Vote     2. Information     3. Exit              \n");
 
             Console.Write("  Your selection: ");
             int option=Convert.ToInt32(Console.ReadLine());
@@ -52,7 +56,15 @@ namespace SchoolVote
 				Console.WriteLine("\nPress any key to exit...");
 				Console.ReadKey();
             } else if (option == 2 ) {
-			    Console.WriteLine(" +====================== Instructions: ======================+\n");
+			    Console.WriteLine("\n +====================== Information: =======================+");
+                Console.WriteLine(tuiInfoSpace);
+                Console.WriteLine(" |  To get started, you need to type the option number 1 to  |");
+                Console.WriteLine(" |  proceed to the voting process. This program will display |");
+                Console.WriteLine(" |  all the candidates nominated for each position there in, |");
+                Console.WriteLine(" |  will confirm then for recording the results.             |");
+                Console.WriteLine(tuiInfoSpace);
+                Console.WriteLine(" +====================== Elegibility: =======================|");
+                Console.WriteLine(tuiInfoSpace);
 			} else if (option == 1) {
                 // Proceed to vote
 				Console.WriteLine(tuiTopLine);
@@ -73,75 +85,112 @@ namespace SchoolVote
                     Console.WriteLine(tuiTopLine);
 					Console.WriteLine("|              " + forThePosition + "'President'"+ "                |");
 					Console.WriteLine(tuiBottomLine);
-                    Console.WriteLine(tuiSpace);
-                    Console.WriteLine("|        1. Marco Lopez                                        |");
-                    Console.WriteLine("|        2. Tristan Abadilla                                   |");
-                    Console.WriteLine("|        3. Kyla Vergara                                       |");
+                    Console.WriteLine(tuiNewLine);
+                    Console.WriteLine(tuiLeftPad + "1. Marco Lopez                                        |");
+                    Console.WriteLine(tuiLeftPad + "2. Tristan Abadilla                                   |");
+                    Console.WriteLine(tuiLeftPad + "3. Kyla Vergara                                       |");
                     Console.WriteLine(tuiBottomLinev2);
-					Console.Write(voteChoice);
+					Console.Write(voteChoiceMsg);
 					int president=Convert.ToInt32(Console.ReadLine());
+                    Console.Write(confirmVoteMsg);
+                    confirmVote = Console.ReadLine().ToUpper();
+                    if (confirmVote == "N")
+                    {
+                        Console.Write(voteChoiceMsg_again);
+                        president=Convert.ToInt32(Console.ReadLine());
+                    }
 
                     // Vice President
                     Console.WriteLine(tuiTopLine);
 					Console.WriteLine("|           " + forThePosition + "'Vice President'"+ "              |");
 					Console.WriteLine(tuiBottomLine);
-                    Console.WriteLine(tuiSpace);
-                    Console.WriteLine("|        1. Janelle                                            |");
-                    Console.WriteLine("|        2. Cruz Jude                                          |");
-                    Console.WriteLine("|        3. Ramirez Sofia Dizon                                |");
+                    Console.WriteLine(tuiNewLine);
+                    Console.WriteLine(tuiLeftPad + "1. Janelle                                            |");
+                    Console.WriteLine(tuiLeftPad + "2. Cruz Jude                                          |");
+                    Console.WriteLine(tuiLeftPad + "3. Ramirez Sofia Dizon                                |");
                     Console.WriteLine(tuiBottomLinev2);
-					Console.Write(voteChoice);
+					Console.Write(voteChoiceMsg);
 					int vice_president=Convert.ToInt32(Console.ReadLine());
+                    confirmVote = Console.ReadLine().ToUpper();
+                    if (confirmVote == "N")
+                    {
+                        Console.Write(voteChoiceMsg_again);
+                        vice_president=Convert.ToInt32(Console.ReadLine());
+                    }
 
                     // Secretary
                     Console.WriteLine(tuiTopLine);
 					Console.WriteLine("|              " + forThePosition + "'Secretary'"+ "                |");
 					Console.WriteLine(tuiBottomLine);
-                    Console.WriteLine(tuiSpace);
-                    Console.WriteLine("|        1. Hannah Bautista                                    |");
-                    Console.WriteLine("|        2. Miguel Sarmiento                                   |");
-                    Console.WriteLine("|        3. Andrei Ong                                         |");
-                    Console.WriteLine("|        4. Ramirez Sofia Dizon                                |");
+                    Console.WriteLine(tuiNewLine);
+                    Console.WriteLine(tuiLeftPad + "1. Hannah Bautista                                    |");
+                    Console.WriteLine(tuiLeftPad + "2. Miguel Sarmiento                                   |");
+                    Console.WriteLine(tuiLeftPad + "3. Andrei Ong                                         |");
+                    Console.WriteLine(tuiLeftPad + "4. Ramirez Sofia Dizon                                |");
                     Console.WriteLine(tuiBottomLinev2);
-					Console.Write(voteChoice);
+					Console.Write(voteChoiceMsg);
 					int secretary=Convert.ToInt32(Console.ReadLine());
+                    confirmVote = Console.ReadLine().ToUpper();
+                    if (confirmVote == "N")
+                    {
+                        Console.Write(voteChoiceMsg_again);
+                        secretary=Convert.ToInt32(Console.ReadLine());
+                    }
 
                     // Treasurer
                     Console.WriteLine(tuiTopLine);
 					Console.WriteLine("|              " + forThePosition + "'Treasurer'"+ "                |");
 					Console.WriteLine(tuiBottomLine);
-                    Console.WriteLine(tuiSpace);
-                    Console.WriteLine("|        1. Justin Mendoza                                     |");
-                    Console.WriteLine("|        2. Carla Fajardo                                      |");
-                    Console.WriteLine("|        3. Rhea Salvador                                      |");
+                    Console.WriteLine(tuiNewLine);
+                    Console.WriteLine(tuiLeftPad + "1. Justin Mendoza                                     |");
+                    Console.WriteLine(tuiLeftPad + "2. Carla Fajardo                                      |");
+                    Console.WriteLine(tuiLeftPad + "3. Rhea Salvador                                      |");
                     Console.WriteLine(tuiBottomLinev2);
-					Console.Write(voteChoice);
+					Console.Write(voteChoiceMsg);
 					int treasurer=Convert.ToInt32(Console.ReadLine());
+                    confirmVote = Console.ReadLine().ToUpper();
+                    if (confirmVote == "N")
+                    {
+                        Console.Write(voteChoiceMsg_again);
+                        treasurer=Convert.ToInt32(Console.ReadLine());
+                    }
 
                     // Auditor
                     Console.WriteLine(tuiTopLine);
-					Console.WriteLine("|               " + forThePosition + "'Auditor'"+ "                |");
+					Console.WriteLine("|               " + forThePosition + "'Auditor'"+ "                 |");
 					Console.WriteLine(tuiBottomLine);
-                    Console.WriteLine(tuiSpace);
-                    Console.WriteLine("|        1. Daniel Uy                                          |");
-                    Console.WriteLine("|        2. Jasmine Flores                                     |");
-                    Console.WriteLine("|        3. Nathan Robles                                      |");
+                    Console.WriteLine(tuiNewLine);
+                    Console.WriteLine(tuiLeftPad + "1. Daniel Uy                                          |");
+                    Console.WriteLine(tuiLeftPad + "2. Jasmine Flores                                     |");
+                    Console.WriteLine(tuiLeftPad + "3. Nathan Robles                                      |");
                     Console.WriteLine(tuiBottomLinev2);
-					Console.Write(voteChoice);
+					Console.Write(voteChoiceMsg);
 					int auditor=Convert.ToInt32(Console.ReadLine());
+                    confirmVote = Console.ReadLine().ToUpper();
+                    if (confirmVote == "N")
+                    {
+                        Console.Write(voteChoiceMsg_again);
+                        auditor=Convert.ToInt32(Console.ReadLine());
+                    }
 
-                    // Auditor
+                    // PIO
                     Console.WriteLine(tuiTopLine);
 					Console.WriteLine("|   " + forThePosition + "'Public Information Officer (PIO)'"+ "    |");
 					Console.WriteLine(tuiBottomLine);
-                    Console.WriteLine(tuiSpace);
-                    Console.WriteLine("|        1. Chloe Marquez                                      |");
-                    Console.WriteLine("|        2. Ranier Navarro                                     |");
-                    Console.WriteLine("|        3. Bea Catalan                                        |");
-                    Console.WriteLine("|        4. Ryan Torres                                        |");
+                    Console.WriteLine(tuiNewLine);
+                    Console.WriteLine(tuiLeftPad + "1. Chloe Marquez                                      |");
+                    Console.WriteLine(tuiLeftPad + "2. Ranier Navarro                                     |");
+                    Console.WriteLine(tuiLeftPad + "3. Bea Catalan                                        |");
+                    Console.WriteLine(tuiLeftPad + "4. Ryan Torres                                        |");
                     Console.WriteLine(tuiBottomLinev2);
-					Console.Write(voteChoice);
+					Console.Write(voteChoiceMsg);
 					int pio=Convert.ToInt32(Console.ReadLine());
+                    confirmVote = Console.ReadLine().ToUpper();
+                    if (confirmVote == "N")
+                    {
+                        Console.Write(voteChoiceMsg_again);
+                        pio=Convert.ToInt32(Console.ReadLine());
+                    }
 				}
 				else {
 					Console.WriteLine("Only ");
